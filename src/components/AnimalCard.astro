@@ -1,0 +1,32 @@
+---
+import { type AnimalEstructura } from "@/modules/models/Animal";
+import { type AnimalTypeClass } from "@/modules/shared/types";
+
+interface Props extends Omit<AnimalEstructura, 'descripcion'> {
+  claseCss: AnimalTypeClass;
+  url: string;
+}
+
+const { categoria, palabraUnica, claseCss, nombre, imagen, url } = Astro.props;
+console.log(imagen)
+---
+
+<div class="group relative">
+  <img
+    src=`/animales/${imagen}`
+    alt=`${nombre} foto`
+    class=`aspect-square w-full rounded-md object-contain group-hover:opacity-75 lg:aspect-auto lg:h-80 ${claseCss}`
+  />
+  <div class="mt-4 flex justify-between">
+    <div>
+      <h3 class="text-sm text-[#f3e7e8]">
+        <a href=`${url}`>
+          <span aria-hidden="true" class="absolute inset-0"></span>
+          {nombre}
+        </a>
+      </h3>
+      <p class="mt-1 text-sm text-gray-400">{categoria}</p>
+    </div>
+    <p class="text-sm font-medium text-gray-400">{palabraUnica}</p>
+  </div>
+</div>

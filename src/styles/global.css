@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #a272c7;
+  --color-primaryHover: #a272c7e8;
+  --color-secondary: #050c29;
+  --color-secondaryHover: #050c29c8;
+  --color-semi-pink: #ffe5f1;
+  --color-purple: #7226ff;
+  --color-pink: #f042ff;
+  --color-skyblue: #87f5f5;
+  --color-semidark: #160078;
+  --color-dark: #010030;
+}
+
+@theme {
+  --color-primary: #a272c7;
+  --color-primaryHover: #a272c7e8;
+  --color-secondary: #050c29;
+  --color-secondaryHover: #050c29c8;
+  --color-semi-pink: #ffe5f1;
+  --color-purple: #7226ff;
+  --color-pink: #f042ff;
+  --color-skyblue: #87f5f5;
+  --color-semidark: #160078;
+  --color-dark: #010030;
+}
+
+@layer components {
+  .bgGradientFear {
+    background: rgb(1, 0, 48);
+    background: linear-gradient(
+      0deg,
+      var(--color-dark) 0%,
+      var(--color-semidark) 40%,
+      var(--color-purple) 100%
+    );
+  }
+
+  .bgGradientCurious {
+    background: rgb(1, 0, 48);
+    background: linear-gradient(
+      0deg,
+      var(--color-pink) 0%,
+      var(--color-semi-pink) 40%,
+      var(--color-skyblue) 100%
+    );
+  }
+
+  .bgGradientFavorite {
+    background: rgb(1, 0, 48);
+    background: linear-gradient(
+      0deg,
+      var(--color-purple) 0%,
+      var(--color-pink) 50%,
+      var(--color-semi-pink) 100%
+    );
+  }
+}
+
+/* 
+@layer base {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-primaryHover {
+    background-color: var(--color-primaryHover);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-secondaryHover {
+    background-color: var(--color-secondaryHover);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+} */
