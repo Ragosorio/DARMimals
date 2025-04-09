@@ -1,5 +1,6 @@
 import type { AnimalType, NoSpacesString } from "@/modules/shared/types";
 import { validarSinEspacios } from "@/modules/utils/validaciones";
+import {slugify} from "@/modules/utils/slugify";
 
 export interface AnimalEstructura {
   nombre: string;
@@ -33,6 +34,6 @@ export class Animal implements AnimalEstructura {
     this.palabraUnica = palabraUnica as NoSpacesString<string>;
     this.descripcion = descripcion;
     this.imagen = imagen as NoSpacesString<string>;
-    this.url = `/animales/${this.nombre.toLowerCase()}`;
+    this.url = `/animales/${slugify(this.nombre)}`;
   }
 }
